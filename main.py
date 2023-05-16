@@ -2,10 +2,10 @@
 
 def get_yes_no_input(prompt):
     while True:
-        user_choice = input(prompt + " (yes/no): ").lower()
-        if user_choice == "yes" or user_choice == "y":
+        user_choice = input(f"{prompt} (y/n or yes/no): ").strip().lower()
+        if user_choice in ['y', 'yes']:
             return True
-        elif user_choice == "no" or user_choice == "n":
+        elif user_choice in ['n', 'no']:
             return False
         else:
-            print("Invalid input. Please enter 'yes' or 'no'.")
+            print("Please enter a valid response (y/n or yes/no).")
